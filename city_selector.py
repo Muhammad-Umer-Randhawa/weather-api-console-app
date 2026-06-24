@@ -9,7 +9,6 @@ def get_coordinates(city_name):
     data = response.json()
 
     if len(data) == 0:
-        print("City not found")
         return None
     elif len(data) == 1:
         return data[0]["lat"], data[0]["lon"], data[0]["name"], data[0]["country"]
@@ -28,6 +27,3 @@ def get_coordinates(city_name):
             continue
         selected = data[choice - 1]
         return selected["lat"], selected["lon"], selected["name"], selected["country"]
-        
-if __name__ == "__main__":
-    print(get_coordinates("Hyderabad"))

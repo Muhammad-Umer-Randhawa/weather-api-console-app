@@ -14,6 +14,3 @@ def get_city():
             continue
         else:
             return clear_name
-
-if __name__ == "__main__":
-    print(get_city())

@@ -1,7 +1,11 @@
 import pyfiglet
+
+def display_header():
+     print("=======================================================================")
+     print(pyfiglet.figlet_format("Weather App"))
+     print("=======================================================================")
+
 def display_weather_data(city_name, country, data):
-    print("=======================================================================")
-    print(pyfiglet.figlet_format("Weather App"))
     print("=======================================================================")
     print(f"{city_name}, {country}")
     print("=======================================================================")
@@ -21,18 +25,3 @@ def display_weather_data(city_name, country, data):
             print(f"{key}: {value}%")
         else:
             print(f"{key}: {value}")
-
-if __name__ == "__main__":
-    test_data = {
-        "Temperature": 28.27,
-        "Feels like": 31.35,
-        "Minimum Temperature": 28.27,
-        "Maximum Temperature": 28.27,
-        "Sky": "clear sky",
-        "Humidity": 71,
-        "Visibility": 10000,
-        "Wind Speed": 10.3,
-        "Sunrise": "05:37 AM",
-        "Sunset": "07:20 PM"
-    }
-    display_weather_data("Hyderabad", "PK", test_data)

@@ -29,6 +29,3 @@ def get_weather(lat, lon):
     except requests.exceptions.ConnectionError:
         print("Unable to fetch weather data, please try again later")
         return None
-    
-if __name__ == "__main__":
-    print(get_weather(25.4075358, 68.3613456))
