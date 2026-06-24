@@ -10,11 +10,10 @@ def main():
     result = get_coordinates(city_name)  
     if result is None:                    
         print("City not found")
-        return   
-                             
+        return             
     lat, lon, name, country = result    
     data = get_weather(lat, lon)
     display_weather_data(name, country, data)
-
+    
 if __name__ == "__main__":
     main()
